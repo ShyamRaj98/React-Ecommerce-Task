@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Sedgwick+Ave+Display&display=swap');
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Fraunces", serif;
+}
+
+p{
+  font-family: "Noto Sans", sans-serif;
+}
+
+.logo,.product-price{
+ font-family: "Sedgwick Ave Display", cursive;
+}
+button{
+  cursor: pointer;
+}
+.product-title{
+   overflow: hidden; 
+  text-overflow: ellipsis;
+  display: -webkit-box; 
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}
+
+.btn-box{
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+
+.product-card:hover .btn-box{
+  opacity: 1;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product-top .product-img{
+  overflow: hidden;
+ transition: transform 0.4s ease;
+}
+.product-card:hover .product-top{
+  overflow: hidden;
+} 
+.product-card:hover .product-top .product-img {
+  transform: scale(1.1);
+}
