@@ -3,7 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import { Route, Routes } from "react-router-dom";
 import MiniCart from './components/MiniCart';
-import Home from './pages/home';
+import Home from './pages/Landing';
 import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/cart';
 import { PRODUCTS_ENDPOINT, REST_HOST_NAME } from './components/API';

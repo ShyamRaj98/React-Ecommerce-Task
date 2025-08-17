@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductCard from '../components/ProductCard'
 
-function Home({productDetails, addToCart}) {
+function Landing({productDetails, addToCart}) {
   return (
     <div className='bg-gray-100'>
         <section className='container md:lg lg:xl mx-auto py-[100px] px-4'>
@@ -16,4 +16,4 @@ function Home({productDetails, addToCart}) {
   )
 }
 
-export default Home
+export default Landing
