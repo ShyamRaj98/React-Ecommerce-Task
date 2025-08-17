@@ -3,10 +3,12 @@ import './App.css'
 import Navbar from './components/Navbar'
 import { Route, Routes } from "react-router-dom";
 import MiniCart from './components/MiniCart';
-import Home from './pages/Landing';
+
 import ProductDetail from './pages/ProductDetail';
-import Cart from './pages/cart';
+
 import { PRODUCTS_ENDPOINT, REST_HOST_NAME } from './components/API';
+import Landing from './pages/Landing';
+import Carts from './pages/Carts';
 
 function App() {
   useEffect(() => {
@@ -54,9 +56,9 @@ function App() {
     <>
       <Navbar count={cartItems.length} openMiniCart={() => setMiniCard(true)} />
       <Routes>
-        <Route exact path='/' element={<Home productDetails={productDetails} addToCart={addToCart} />} />
+        <Route exact path='/' element={<Landing productDetails={productDetails} addToCart={addToCart} />} />
         <Route path='/product/:id' element={<ProductDetail addToCart={addToCart} cart={cartItems} />} />
-        <Route path='/cart' element={<Cart cartItems={cartItems} removeProduct={removeProduct} updateQty={updateQty} />} />
+        <Route path='/cart' element={<Carts cartItems={cartItems} removeProduct={removeProduct} updateQty={updateQty} />} />
       </Routes>
       <MiniCart updateQty={updateQty} cartItems={cartItems} removeProduct={removeProduct} closeMiniCart={() => setMiniCard(false)} miniCard={miniCard} />
     </>

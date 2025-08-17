@@ -2,7 +2,7 @@ import React from 'react'
 import { MdDeleteOutline } from "react-icons/md";
 import Quantity from '../components/Quantity';
 
-function Cart({ cartItems, removeProduct, updateQty }) {
+function Carts({ cartItems, removeProduct, updateQty }) {
   const total = cartItems.reduce((sum, item) => sum + item.price * item.qty, 0);
   const discount = total * 0.1;
   const finalPrice = total - discount;
@@ -45,4 +45,4 @@ function Cart({ cartItems, removeProduct, updateQty }) {
   )
 }
 
-export default Cart
+export default Carts
